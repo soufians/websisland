@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+body {margin: auto;padding-top:68px; font-family: droid arabic naskh bold; font-size: 18px; }
+
+/*navbar*/
+
+.navbar .brand {color: #65D269; font-size: 21px; padding: 22px 20px 22px 50px;}
+.navbar .brand  span {font-size: 18px}
+.navbar .nav > li > a {padding: 20px 10px 15px; margin-left: 50px; margin-bottom: 10px;}
+.navbar-inner {min-height: 45px; background: #fff;font-family:Andalus; font-size:19px}
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus 
+{ border-bottom: solid #65D269 2px;background-color: #fff;box-shadow:none; color: #65D269;}
+/*collapse*/
+.navbar .btn-navbar {margin-left: 15px;}
+.navbar .btn, .navbar .btn-group { margin-top: 20px;}
+.nav-collapse .nav > li > a:hover, .nav-collapse .nav > li > a:focus,
+.nav-collapse .dropdown-menu a:hover, .nav-collapse .dropdown-menu a:focus{background: #fff; color:#65D269}
+
+
+/*drowpdown*/
+.dropdown-menu > li > a {line-height: 40px; margin: 0px 5px}
+.navbar .nav li.dropdown.open > .dropdown-toggle
+{
+    background-color: #fff;background-image: none;
+}
+.navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle
+{
+    background:#fff; border-bottom:solid #65D269 2px ;background-image: none;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-submenu:hover > a, .dropdown-submenu:focus > a,
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus
+{
+    background-image: none; background-color: #fff; color: #65D269
+}
+
+/*carsole*/
+
+.carousel-indicators {top: 25px;right:7%;} /*92*/
+.carousel-inner img {margin: auto;}
+.carousel-indicators li 
+{
+    float: right; width: 12px;
+    height:10px;
+    background-color:rgb(255,255,255);
+    border:2px solid rgb(101,210,105);
+    border-radius: 4px;
+}
+.carousel-indicators .active {background-color: rgb(101,210,105)}
+/*caption*/
+.carousel-caption { background: transparent; top: 30%;width: 50%;right: 25%;}
+.carousel-control 
+{
+    top: 50%;
+    width: 30px;
+    height: 40px;
+    font-size: 40px;
+    line-height: 35px;
+    background: #65D269;
+}
+.carousel-control-phone 
+{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    width: 20px;
+    height: 30px;
+    /*margin-top: -20px;*/
+    font-size: 30px;
+    font-weight: 100;
+    line-height: 25px;
+    color: #ffffff;
+    text-align: center;
+    background: #65D269;
+    border: 2px solid #ffffff;
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    border-radius: 23px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);}
+#web-design .table tr th {text-align:center;}
+#web-design .table tr td {text-align:center;}
+
+section {color: #888; text-align: center;padding-top:68px;}
+section h2 {font-family: Andalus;color:#666;}
+section span {border-bottom: 2px #65D269 solid;}
+#web-design .table {margin-top:25px;}
+.form-control {width: 100%; }
+#hosting {text-decoration: none; }
+#about-us {padding-bottom: 15%; font-size: 24px;}
+#contact-us {padding-bottom: 10%; }

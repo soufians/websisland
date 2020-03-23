@@ -1,0 +1,482 @@
+﻿<!doctype html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+
+  <!-- IE compatibility meta -->
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- first mobile meta-->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>websisland-ويبس ايلاند</title>
+
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+
+  <link href="css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>-->
+
+  <!--[if lt IE 9]>
+
+    <script type="js/html5shiv.min.js"></script>
+
+    <script type="js/respond.min.js"></script>
+
+  <![endif]-->
+
+  <script>
+
+function _(id){ return document.getElementById(id); }
+
+	function submitForm(){
+
+    
+
+      _("mybtn").disabled = true;
+
+		  _("status").innerHTML = 'يرجى الانتظار...';
+
+      $.post("contact.php",
+
+      {n:_("n").value ,e: _("e").value , p: _("p").value,m:_("m").value},
+
+      function(data,status){
+
+        if(status == "success")
+
+        {
+
+          _("mybtn").disabled = false;
+
+          $("my_form").fadeOut( "slow" );
+
+          _("my_form").innerHTML = '<h2>شكرا '+_("n").value+', تم إرسال الرسالة بنجاح.</h2>';
+
+        }
+
+      });
+
+  }
+
+
+
+
+
+	</script>
+
+</head>
+
+
+
+<body data-spy="scroll" data-target=".navbar">
+
+  <header>
+
+    <div class="navbar navbar-fixed-top">
+
+      <div class="navbar-inner">
+
+        <div class="container">
+
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+
+          <span class="icon-bar"></span>
+
+          <span class="icon-bar"></span>
+
+          <span class="icon-bar"></span>
+
+          </a>
+
+          <a class="brand"  href="index.html">ويبس ايلاند &nbsp;<span>لتصميم المواقع</span></a>
+
+          <div class="nav-collapse collapse">
+
+            <ul class="nav">
+
+              <li class="active"><a href="index.html" >رئيسية</a></li>
+              <li><a href="#web-design">تصميم مواقع</a></li>
+
+             <!-- <li class="dropdown"> القائمة المنسدلة لخدماتنا تم إقافها إلى أن يكتملو صفحات دومين والاستضافة
+
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">خدماتنا&nbsp;&nbsp;<span class="caret"></span></a>
+
+                <ul class="dropdown-menu">
+
+                  <li><a href="#web-design">تصميم مواقع</a></li>
+
+                  <li><a href="#domain">حجز نطاق</a></li>
+
+                  <li><a href="#hosting">الاستضافة</a></li>
+
+                </ul>
+
+              </li> -->
+
+              <li><a href="#about-us">من نحن</a></li>
+
+              <li><a href="#contact-us">تواصل معنا</a></li>
+
+            </ul>
+
+          </div>
+
+        </div>  
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <section id="home" style="padding-top:0px;height:600px;">
+
+    <div class="container-fluid">
+
+      <div id="myCarousel" class="carousel slide">
+
+      <ol class="carousel-indicators hidden-phone">
+
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+
+      </ol>
+
+      <!-- Carousel items -->
+
+      <div class="carousel-inner">
+
+        <div class="active item"><img src="images/websisland-slide-01.jpg"></img>
+
+          <div class="carousel-caption"><!-- hidden-phone -->
+
+            <h2>ويبس ايلاند</h2>
+
+             <p>
+
+                نتطلع لنكون واحدة من افضل شركات تصميم المواقع الالكترونية و تطوير الأعمال التجارية عبر الإنترنت الرائدة في سورية  من خلال تقديم حلول متكاملة ذات جودة عالية وذلك باستخدام التكنولوجيا الأفضل في فئتها،مع فهم عميق لحاجات عملائنا.
+
+              </p>
+
+          </div>
+
+        </div>
+
+        <div class="item"><img src="images/websisland-slide-03.jpg"></img>
+
+          <div class="carousel-caption">
+
+            <h2>معنا…موقعك الالكتروني اصبح واقع فى عالم بلا حدود …</h2>
+
+             <p>
+
+حيثُ تبدأ الرؤية الخاصة بك لتصبح حقيقة يمكننا تحويل أفكارك لواقع نحن نجمع بين الإحتراف والخبرة لعمل تصميم مواقع الكترونية تفاعلية فريدة من نوعها تمتد إلى أبعد من الشاشة والصفحة.وفقا لأحتياجات عملائنا ومن خلال عرض محتوى الموقع لضمان أعلى مستوى من التواصل مع زوار موقعك وعملاء شركتك.
+
+             </p>
+
+          </div>
+
+        </div>
+
+        <div class="item"><img src="images/websisland-slide-02.jpg"></img>
+
+<!--           <div class="carousel-caption hidden-phone">
+
+            <h2>This is pic 2...</h2>
+
+             <p>
+
+               The font-size property sets the size of the text.
+
+               Being able to manage the text size is important in web design. However, you should not use font size adjustments to make paragraphs look like headings, or headings look like paragraphs.
+
+               Always use the proper HTML tags.
+
+             </p>
+
+          </div> -->
+
+        </div>
+
+      </div>
+
+      <!-- Carousel nav -->
+
+      <a class="carousel-control right hidden-phone" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+
+      <a class="carousel-control left hidden-phone" href="#myCarousel" data-slide="next">&rsaquo;</a>
+
+
+
+      <a class="carousel-control right visible-phone carousel-control-phone" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+
+      <a class="carousel-control left visible-phone carousel-control-phone" href="#myCarousel" data-slide="next">&rsaquo;</a>
+
+    </div> <!-- close container-fluid -->
+
+  </section>
+
+  <section id="web-design" >
+
+    <div class="container">
+
+      <div class="row">
+
+        <h2><span>تصميم مواقع</span></h2><br><br>
+
+        <h3>التجارة الإلكترونية</h3><br>
+
+        <p>
+
+        طالما بحث اصحاب منظمات الأعمال منذ الأزل عن كيفية ايصال منتجاتهم وخدماتهم المختلفة لمن هم بحاجة لها<br><br>
+
+        فتعددت الأنشطة المستخدمة إما عن طريق الجرائد أو الإعلانات الطرقية أوالإذاعة أو التلفاز<br><br>
+
+        أما الآن يعتبر تطور تكنولوجيا المعلومات من ابرز ميزات هذا العصر<br><br>
+
+        وأصبحت المواقع الإلكترونية من أهم الأنشطة التسويقية والإعلانية فهي محور منظمات الأعمال<br><br>
+
+        للترويج عن منتجاتهم وخدماتهم المختلفة فهي تعتبر صلة الوصل لتبادل المعلومات<br><br>
+
+        حول المنتج وحول نقاط القوة والتمييز الحقيقي مع المستهلك بشكل مباشر.
+
+        </p>
+
+      </div><!-- close row -->
+
+      <div class="row">
+
+        <table class="table table-striped" >
+
+          <tr>
+
+            <th>مراحل التصميم</th>
+
+            <th>التقنيات المستخدمة في التصميم</th>
+
+            <th>التقنيات المستخدمة في البرمجة</th>
+
+          </tr>
+
+          <tr>
+
+            <td>
+
+				تحليل المشروع<br><br>
+
+				الحصول على المعلومات المطلوبة من العميل<br><br>
+
+				بناء نموذج أولي وعرضها للعميل<br><br>
+
+				تقيم النسخة الأولية<br><br>
+
+				تصحيح ا لنسخة الأولية لإصدار النسخة النهائية<br><br>
+
+				نشر الموقع</td>
+
+            <td>
+
+              Photoshop<br><br>
+
+              Illustrator<br><br>
+
+              HTML<br><br>
+
+              CSS<br><br>
+
+              Bootstrap</P><br><br>
+
+            </td>
+
+            <td>
+
+              Wordpress<br><br>
+
+              PHP <br><br>
+
+              MVC<br><br>
+
+              MySQL</p>
+
+            </td>
+
+          </tr>
+
+        </table>
+
+      </div><!-- close row -->
+
+    </div> <!-- close container -->
+
+  </section>
+
+<!-- End web desgin section -->
+
+
+
+
+
+<!-- Start domain section -->
+
+<!-- <h1> <section id="domain">
+
+ <h2><span>حجز نطاق Domain</span></h2><br><br>
+
+  .
+
+  .
+
+  .
+
+  </section>
+</h1>
+<!-- End domain section -->
+
+
+<!-- Start hosting section -->
+<!--  <section id="hosting" >
+
+    <divclass="container">
+
+    <h2><span>الاستضافة Hosting</span></h2><br><br>
+
+    <h4>
+
+    <a href="https://www.register.com/register-domain-names.rcmx" target="blank">استضافة موقع الانترنت الخاص بك تبدأ بحجز نطاق لموقعك (دومين)</a>  
+
+    </h4><br><br>
+
+      <div class="row">
+
+        <div class="span3">المزايا</div>
+
+        <div class="span3">براونز</div>
+
+        <div class="span3">فضي</div>
+
+        <div class="span3">ذهبي</div>
+
+      </div>
+
+    </div>
+
+    <div class="row"><h4>حول مميزات الاستضافة</h4></div>
+
+  </section>
+  <!-- End hosting section -->
+
+  <section id="about-us" >
+
+    <div class="container">
+
+      <div class="row">
+
+          <h2><span>من نحن</span></h2><br><br>
+
+          <p>شركة رائدة في مجال<br><br>
+
+          تصميم وبرمجة المواقع وتطبيقات الإنترنت <br><br>
+
+          بأحدث التقنيات العالمية<br><br>
+
+          والتي تتميز بأناقة التصميم وسهولة الإدارة<br><br>
+
+          وعرض البيانات والمنتجات بطرق متميزة</p> 
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ENd sectioin about-us -->
+
+
+
+  <!-- start sectioin contact-us -->
+
+
+
+  <section id="contact-us" >
+
+    <div class="container" ng-app="myApp" ng-controller="myCtrl">
+
+      <div class="row">
+
+        <h2><span>تواصل معنا</span></h2><br><br><p>
+
+        <div class="span6" style="margin-top: 3%;">
+
+          سوريا - دمشق - مشروع دمر <br><br>
+
+          جوال : 963932011260+<br><br>
+
+          البريد الكتروني : info@websisland.com<br><br></p> <!-- End Form -->
+
+        </div>
+
+        <!-- start form  -->
+
+        <!-- The form contains the following fields:(name,phone,email,message) -->
+
+        <div class="span6">
+
+          <form id="my_form" onsubmit="submitForm(); return false;"><!-- action="index.html#contact-us" -->
+
+            <input id="n" type="text" name="Name" placeholder="الاسم" class="form-control" maxlength="50"  required>
+
+            <input id="e" type="email"  name="Email" placeholder="البريد الإلكتروني" class="form-control" maxlength="75"  required>
+
+            <input id="p" type="tel"  name="Phone" placeholder="جوال" class="form-control" maxlength="12"  required>
+
+            <textarea  id="m" placeholder="الرسالة" rows="8" class="form-control" maxlength="1000" required></textarea>
+
+			<p align="right"><input id="mybtn" type="submit" value="إرسال الرسالة" style="height:40px; width:50%"> <span id="status"></span></p></form>
+
+        </div>
+
+        <!-- End Form -->
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- End sectioin contact-us -->
+
+
+
+  <!-- include jquery -->
+
+  <script type="text/javascript"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+  <!-- include bootsrap javascipt -->
+
+  <script src="js/bootstrap.min.js"></script>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
+
