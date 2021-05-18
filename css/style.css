@@ -2,8 +2,11 @@
 
 /* CSS Document */
 
-body {margin: auto;padding-top:68px; font-family: droid arabic naskh bold; font-size: 18px; }
+body {margin: auto;padding-top:68px; font-family: droid arabic naskh bold; font-size: 18px;  }
 
+html {
+    scroll-behavior: smooth;
+}
 /*navbar*/
 
 .navbar .brand {color: #65D269; font-size: 21px; padding: 22px 20px 22px 50px;}
@@ -55,11 +58,16 @@ body {margin: auto;padding-top:68px; font-family: droid arabic naskh bold; font-
 .carousel-control 
 {
     top: 50%;
+    right: 90%;
+    left: 5%;
     width: 30px;
     height: 40px;
     font-size: 40px;
     line-height: 35px;
     background: #65D269;
+}
+.carousel-control.right{
+    right:7%;
 }
 .carousel-control-phone 
 {
